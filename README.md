@@ -1,63 +1,195 @@
-# 📄 Portal de Documentos
+# Gestão Logística Nilfisk
 
-O **Portal de Documentos** é um sistema web completo para empresas que desejam distribuir holerites e documentos de forma segura, prática e moderna.
+O **Gestão Logística Nilfisk** é um aplicativo mobile desenvolvido para controlar todo o fluxo logístico de máquinas, desde o **registro da nota fiscal até a entrega ao cliente**.
 
-## 🚀 Funcionalidades
+O sistema permite acompanhar todas as etapas do processo:
 
-- Upload em massa de holerites em PDF
-- Identificação automática por colaborador
-- Consulta por mês/ano
-- Notificação por e-mail
-- Painel de RH com relatórios
-- Armazenamento em AWS S3
-- Login com autenticação segura
+- Entrada de pedido
+- Oficina
+- Embalagem
+- Checklist
+- Fotos da máquina
+- Gestão de frete
+- Entrega
+- Ocorrências e sinistros
 
-## 🛠️ Tecnologias Utilizadas
+Tudo em um único aplicativo pensado para **operações logísticas industriais**.
 
-- **Frontend**: React + TailwindCSS
-- **Backend**: Node.js + Express
-- **Banco de Dados**: PostgreSQL
-- **Armazenamento**: AWS S3
-- **Deploy**: Render
+---
 
-## 👤 Acesso
+# Funcionalidades
 
-- Usuário RH/Admin
-- Colaborador
+- Cadastro de pedidos e notas fiscais  
+- Controle de fluxo logístico (Oficina → Embalagem → Envio → Entrega)  
+- Checklist obrigatório de itens da máquina  
+- Registro de fotos da máquina e acessórios  
+- Controle de transportadoras e fretes  
+- Registro de ocorrências e sinistros  
+- Upload de documentos (canhoto da NF e CTe)  
+- Envio automático de e-mail confirmando entrega  
+- Dashboard com indicadores logísticos  
+- Relatórios operacionais e de desempenho  
 
-## 📂 Estrutura do Projeto
+---
 
-- `/frontend` → Interface do sistema
-- `/backend` → API e regras de negócio
-- `/docs` → Documentação técnica e de requisitos
+# Perfis de Usuário
 
-## 📌 Como rodar o projeto localmente
+O sistema possui **3 níveis de acesso**.
 
-1. **Clone o repositório**:
+## Administrador
 
-   ```bash
-   git clone https://github.com/seu-usuario/portal-de-documentos.git
-   cd portal-de-documentos
-   ```
+Responsável por:
 
-2. **Backend** (`/backend`)
+- cadastrar usuários
+- cadastrar clientes
+- cadastrar transportadoras
+- visualizar todos os processos
+- acessar relatórios completos
 
-   ```bash
-   cd backend
-   npm install
-   # configure o arquivo .env com suas credenciais
-   npm run dev
-   ```
+Login inicial: Ja determinado no sistema e configurado direto no banco de dados
 
-3. **Frontend** (`/frontend`)
-   ```bash
-   cd ../frontend
-   npm install
-   # configure o arquivo .env com VITE_API_URL=http://localhost:5000
-   npm run dev
-   ```
+---
+
+## Usuário de Entrada de Pedido
+
+Responsável por:
+
+- registrar pedidos
+- registrar notas fiscais
+- iniciar o processo logístico
+- enviar equipamentos para oficina e embalagem
+
+---
+
+## Usuário de Logística
+
+Responsável por:
+
+- iniciar fluxo de frete
+- registrar coleta
+- registrar entrega
+- anexar documentos
+- registrar ocorrências ou sinistros
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+## Mobile App
+- React Native
+
+## Backend
+- PHP (API REST)
+
+## Banco de Dados
+- MySQL
+
+## Armazenamento
+- Upload de fotos e documentos
+
+## Integrações futuras
+- Envio de e-mails automáticos  
+- Notificações push  
+- Sistema de rastreamento de entrega  
+
+---
+
+# 📂 Estrutura do Projeto
+/mobile-app → Aplicativo mobile (React Native)
+
+/backend → API do sistema em PHP
+
+/database → Scripts SQL e estrutura do banco
+
+/docs → Documentação técnica e fluxos do sistema
+
+
+---
+
+# 📊 Fluxo Operacional do Sistema
+
+O aplicativo segue o fluxo logístico abaixo:
+Entrada do Pedido / Nota Fiscal
+↓
+Oficina
+↓
+Embalagem
+↓
+Checklist obrigatório
+↓
+Fotos da máquina
+↓
+Finalização embalagem
+↓
+Pronto para envio
+↓
+Fluxo de frete
+↓
+Entrega
+↓
+Ocorrência ou Sinistro
+↓
+Envio automático de e-mail
+
+---
+
+git clone https://github.com/seu-usuario/gestao-logistica-nilfisk.git
+
+cd gestao-logistica-nilfisk
+
+# 📌 Como rodar o projeto localmente
+
+Clone o repositório:
+
 
 > Acesse: `http://localhost:5173` (frontend) e `http://localhost:5000` (backend)
+
+
+---
+
+# Backend
+cd backend
+
+configurar banco de dados MySQL
+configurar arquivo .env com credenciais
+
+php -S localhost:8000
+
+
+---
+
+# Mobile App
+cd mobile-app
+
+npm install
+npx expo start
+
+
+---
+
+# 📍 Estrutura inicial de dados
+
+O sistema inicia com um usuário administrador padrão:
+
+
+⚠️ Após o primeiro login a senha deve ser alterada.
+
+---
+
+# 📈 Funcionalidades futuras
+
+- Sistema de tracking para clientes acompanharem entregas  
+- Dashboard avançado com métricas logísticas  
+- Integração com ERP  
+- Scanner de código de barras de notas fiscais  
+- Notificações automáticas de status  
+
+---
+
+# 📄 Licença
+
+Projeto desenvolvido para uso interno da operação logística **Nilfisk**.
+
 
 # Documentação
 
