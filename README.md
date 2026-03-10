@@ -73,7 +73,7 @@ Responsável por:
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 ## Mobile App
 - React Native
@@ -94,7 +94,7 @@ Responsável por:
 
 ---
 
-# 📂 Estrutura do Projeto
+# Estrutura do Projeto
 /mobile-app → Aplicativo mobile (React Native)
 
 /backend → API do sistema em PHP
@@ -106,38 +106,71 @@ Responsável por:
 
 ---
 
-# 📊 Fluxo Operacional do Sistema
+# Fluxo Operacional do Sistema
 
-O aplicativo segue o fluxo logístico abaixo:
-Entrada do Pedido / Nota Fiscal
-↓
-Oficina
-↓
-Embalagem
-↓
-Checklist obrigatório
-↓
-Fotos da máquina
-↓
-Finalização embalagem
-↓
-Pronto para envio
-↓
-Fluxo de frete
-↓
-Entrega
-↓
-Ocorrência ou Sinistro
-↓
-Envio automático de e-mail
+# Fluxo Logístico do Aplicativo
 
+O aplicativo segue o fluxo operacional abaixo para garantir o controle completo do processo logístico desde a entrada do pedido até a entrega final.
+
+## 1. Entrada do Pedido / Nota Fiscal
+Registro inicial do pedido ou da nota fiscal no sistema.
+
+⬇️
+
+## 2. Oficina
+A máquina ou equipamento é direcionado para a oficina para preparação ou manutenção necessária.
+
+⬇️
+
+## 3. Embalagem
+Início do processo de embalagem do equipamento.
+
+⬇️
+
+## 4. Checklist Obrigatório
+Realização de um checklist obrigatório para garantir que todos os procedimentos foram realizados corretamente.
+
+⬇️
+
+## 5. Registro de Fotos
+Captura e armazenamento de fotos da máquina antes do envio para documentação e rastreabilidade.
+
+⬇️
+
+## 6. Finalização da Embalagem
+Conclusão do processo de embalagem após validação do checklist e registro das fotos.
+
+⬇️
+
+## 7. Pronto para Envio
+O equipamento é marcado no sistema como pronto para expedição.
+
+⬇️
+
+## 8. Fluxo de Frete
+Início do processo logístico de transporte e definição da transportadora.
+
+⬇️
+
+## 9. Entrega
+Registro da entrega ao cliente final.
+
+⬇️
+
+## 10. Ocorrência ou Sinistro
+Caso exista algum problema durante o transporte ou entrega, é registrado no sistema como ocorrência ou sinistro.
+
+⬇️
+
+## 11. Envio Automático de E-mail
+O sistema realiza o envio automático de e-mails para notificação das partes envolvidas no processo.
 ---
 
 git clone https://github.com/seu-usuario/gestao-logistica-nilfisk.git
 
 cd gestao-logistica-nilfisk
 
-# 📌 Como rodar o projeto localmente
+# Como rodar o projeto localmente
 
 Clone o repositório:
 
@@ -167,7 +200,7 @@ npx expo start
 
 ---
 
-# 📍 Estrutura inicial de dados
+# Estrutura inicial de dados
 
 O sistema inicia com um usuário administrador padrão:
 
@@ -176,7 +209,7 @@ O sistema inicia com um usuário administrador padrão:
 
 ---
 
-# 📈 Funcionalidades futuras
+# Funcionalidades futuras
 
 - Sistema de tracking para clientes acompanharem entregas  
 - Dashboard avançado com métricas logísticas  
@@ -186,7 +219,7 @@ O sistema inicia com um usuário administrador padrão:
 
 ---
 
-# 📄 Licença
+# Licença
 
 Projeto desenvolvido para uso interno da operação logística **Nilfisk**.
 
