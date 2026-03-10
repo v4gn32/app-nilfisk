@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  name     String    // Armazenado em LETRAS MAIÚSCULAS (validado no backend)
+  email    String    @unique
+  password String
+  role     Role      @default(COMMON)
+  documents Document[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Document {
+  id        Int      @id @default(autoincrement())
+  type      DocumentType
+  filename  String
+  url       String
+  month     Int
+  year      Int
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  COMMON
+}
+
+enum DocumentType {
+  HOLERITE
+  FERIAS
+  COMISSAO
+  INFORME_RENDIMENTO
+}
