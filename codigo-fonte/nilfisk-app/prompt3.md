@@ -1,4 +1,4 @@
-# 02 - Criando o Prompt
+# Criando o Prompt
 
 Quero criar uma aplicação SaaS web responsiva. Seguem abaixo os detalhes do projeto:
 
