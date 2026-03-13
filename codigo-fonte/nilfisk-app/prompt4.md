@@ -450,6 +450,7 @@ Destinatários:
 * e-mails adicionais
 
 Conteúdo do e-mail:
+
 ``` 
 Olá,
 
@@ -476,7 +477,7 @@ Atenciosamente,
 Equipe de Logística Nilfisk
 Sistema de Gestão Logística 
 
-´´´
+```
 
 
 Confirmação de entrega com anexos:
