@@ -12,7 +12,7 @@ Gestão Logística Nilfisk
 
 # Objetivo
 
-Desenvolver um aplicativo mobile de gestão logística para a Nilfisk que permita controlar todo o fluxo operacional das máquinas, desde o recebimento do pedido até a entrega final ao cliente.
+Desenvolver um aplicativo mobile de gestão logística para a Nilfisk que permita controlar todo o fluxo operacional de máquinas, desde o recebimento do pedido até a entrega final ao cliente.
 
 O sistema deve permitir:
 
@@ -61,11 +61,12 @@ Interface moderna, profissional e otimizada para uso em dispositivos móveis.
 
 ### Paleta de cores
 
-* Azul principal: #004AAD
-* Azul escuro: #1E2A38
+* Azul principal: #1E2A38 (Padrão Nilfisk)
+* Azul: #004AAD
 * Cinza escuro: #2F2F2F
 * Cinza claro: #E5ECFC
 * Branco: #FFFFFF
+* Verde: #38C682
 
 ### Diretrizes de Design
 
@@ -78,7 +79,7 @@ Interface moderna, profissional e otimizada para uso em dispositivos móveis.
 
 Fontes:
 
-* Roboto
+* Roboto (Padrão Nilfisk)
 
 ---
 
@@ -155,7 +156,7 @@ Fluxo principal do processo logístico:
 ```id="b3s2m1"
 Pedido recebido
    ↓
-Cadastro do pedido
+Cadastro do pedido (Nota Fiscal)
    ↓
 Cadastro das máquinas
    ↓
@@ -196,6 +197,15 @@ Processo finalizado
 
 # Funcionalidades do Aplicativo Mobile
 
+## Tela 0 - Boas Vindas
+
+* Background - Cor: #1E2A38
+* Logo - Branco 
+* Textos - Branco
+* Botão Entrar #38C682
+
+---
+
 ## Tela 1 – Login
 
 Campos:
@@ -231,7 +241,7 @@ Informações exibidas:
 
 * número do pedido
 * cliente
-* vendedor
+* vendedor (Fazer Lista suspensa)
 * status
 * data
 
@@ -250,7 +260,7 @@ Campos:
 * número do pedido
 * cliente
 * contato do cliente
-* vendedor
+* vendedor (Lista suspensa)
 * emails adicionais
 * tipo de processo (Saída ou Retorno)
 * observações
@@ -294,12 +304,16 @@ Ações disponíveis:
 Processo de preparação da máquina.
 
 Checklist:
-
-* carregador
-* mangueira
-* cabos
-* manual
-* acessórios
+* Cabo Carregamento
+* Escova
+* Suporte de Disco
+* Carregador
+* Chave
+* Saia
+* Rodo
+* Manual
+* Confirmação de N/S
+* Confirmação de Qtde
 
 Cada item deve possuir checkbox.
 
@@ -436,6 +450,34 @@ Destinatários:
 * e-mails adicionais
 
 Conteúdo do e-mail:
+``` 
+Olá,
+
+Informamos que o processo logístico referente à Nota Fiscal nº {numero_nota} foi finalizado com sucesso.
+
+Informações da Entrega
+
+Cliente: {cliente_nome}
+Responsável pela entrega: {responsavel_entrega}
+Data da entrega: {data_entrega}
+
+A entrega foi realizada conforme o procedimento operacional da logística, incluindo:
+
+* Conferência dos itens
+* Registro fotográfico da máquina
+* Registro fotográfico do comprovante de entrega (canhoto)
+
+As imagens e registros do processo foram anexados a este e-mail para fins de controle e rastreabilidade.
+
+Caso exista qualquer dúvida ou necessidade de informação adicional, nossa equipe logística está à disposição.
+
+Atenciosamente,
+
+Equipe de Logística Nilfisk
+Sistema de Gestão Logística 
+
+´´´
+
 
 Confirmação de entrega com anexos:
 
