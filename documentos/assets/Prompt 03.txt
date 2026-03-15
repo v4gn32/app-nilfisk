@@ -1,0 +1,90 @@
+Quero criar uma aplicação SAAS web responsiva. Seguem abaixo os detalhes do projeto:
+
+1. Nome do Projeto:
+- Pedido Web
+
+2. Objetivo:
+- O objetivo é ajudar donos de empresas que vendem comida por delivery. Os donos das empresas farão a divulgação do link público de seu cardápio digital e os cliente poderão fazer seus pedidos de forma online.
+
+3. Tecnologias:
+- Utilize PHP e banco de dados MySQL
+
+4. Design, Cores e Layout:
+- Interface limpa, minimalista e profissional. 
+- As cores devem ser baseadas na paleta de cores da imagem anexada (tons de verde, cinza escuro, preto e branco).
+- Deve ser responsivo a qualquer dispositivo e tamanho de tela.
+- Focado na melhor experiência de uso possível (UX).
+- Na área administrativa: usar layout moderno com sidebar à esquerda na cor preta, logotipo no topo e menu de navegação. 
+  Separe o arquivo menu.php que implementa o menu sidebar.
+- Use a fonte "Poppins".
+- Botões de ação (primário em verde, secundários em branco com borda cinza).
+
+
+5. Requisitos importantes:
+- Essa aplicação tem 2 áreas totalmente separadas: área do cliente (cardápio público sem login) e área do administrador (privada com login, para manutenção do cardápio, pedidos, etc).
+- O cardápio digital pode ser acessado por qualquer pessoa sem a necessidade de login (área pública).
+- O sistema deve ter login (sessões PHP nativas) somente para a área administrativa.
+- Cada empresa deve ver apenas os seus dados (arquitetura multi-tenancy).
+- Código claro, fácil de entender e evoluir se necessário.
+- Não permitir duas contas de empresas com o mesmo e-mail.
+- Máscara de telefone: Formato brasileiro (XX) XXXXX-XXXX.
+- As senhas dos usuários devem ter no mínimo 6 caracteres.
+- Formato de moeda: R$ com separador de milhar.
+- Formato de data: dd/mm/yyyy.
+- Usar ícones modernos e no formato outline.
+
+
+6. Funcionalidades da aplicação para a área do cliente (pública - sem necessidade de login):
+- O cliente não realiza login, ele recebe o link e acessa diretamente os produtos do cardápio para fazer seu pedido.
+- O cliente somente deve conseguir fazer pedidos se o estabelecimento estiver aberto no momento.
+
+- Tela 1: cardápio no formato página única:
+a) Deve exibir: foto do estabecimento no topo, nome do estabelecimento, indicador se está aberto agora ou não, lista das categorias na horizontal, produtos em destaque e produtos agrupados pelas categorias.
+b) Ao tocar sobre uma categoria, rolar a página e levar o usuário para a categoria desejada (link interno).
+c) Ao tocar sobre um produto, abrir os detalhes do produto por cima do menu em um popup modal.
+
+- Tela 2: carrinho de compras. Mostrar os produtos escolhidos, quantidades, frete, valores unitários e totais. Botão para "Continuar para entrega"
+
+- Tela 3: Dados de entrega. Formulário com nome completo, whatsapp, endereço completo (todos campos obrigatórios).
+
+- Tela 4: Pagamento. Aqui o cliente escolhe como vai pagar: 
+a) Dinheiro
+b) Pix (mostrar chave pix do restaurante)
+c) Cartão de Débito 
+d) Cartão de Crédito
+
+(no caso dos 2 cartões acima, o entregador leva a máquina de cartão no momento da entrega)
+
+- Tela 5: Confirmação. Exibir confirmação de que o pedido foi realizado com sucesso e os dados do pedido. Colocar um botão "Enviar confirmação no WhatsApp". Ao Abrir whatsapp, enviar a mensagem:
+
+"Olá! Acabei de realizar o pedido {pedido}.
+
+{itens}
+
+Valor Total: {total}
+
+Cliente: {cliente}
+End. Entrega: {entrega}"
+
+7. Funcionalidades da aplicação para o painel administrativo (com login)
+- Tela de login: e-mail e senha.
+- Tela de dashboard: pedidos do dia, pedidos pendentes, total faturado no dia, historico de faturamento dos ultimos 7 dias, produtos mais vendidos (qtde e valor) e pedidos recentes.
+- Tela de clientes: listagem dos clientes com nome, whatsapp, endereço, qtd pedidos e botão para enviar whatsapp.
+- Tela de pedidos: listagem dos pedidos com cliente, data pedido, valor total, forma de pagamento, pago ou não e status do pedido (Pendente, Aceito, Em produção, Saiu para entrega, Entregue e Cancelado).
+- Tela de cardápio:
+a) Administrador pode criar categorias (Ex: massas, lanches, bebidas, etc) e produtos para cada uma das categorias. 
+b) Em cada produto temos as informações: nome, descrição, foto, preço, ativo ou não (switch), se é destaque ou não (switch), lista dos adicionais que pode ser acrescentado nesse produto (ex: Bacon - R$ 5,00, Ovo - R$ 3,00, etc).
+c) Botão para copiar o link público do cardápio para divulgar aos clientes.
+
+- Tela WhatsApp: para configurar os templates de textos a serem usados na integração com whatsapp:
+a) Confirmação do pedido pelo cliente.
+b) Atualição de status dos pedidos.
+c) Ao lado de cada template, mostrar um preview de como fica o texto final (após troca das variáveis).
+
+- Tela de Configurações: 
+a) Dados do estabelecimento: nome do estabelecimento, endereço, foto do estabecimento, logotipo do estabecimento, whatsapp, se está aberto agora ou não (switch).
+b) Opção para alterar a senha.
+c) Formas de pagamento: marcar com checkbox cada forma de pagamento que trabalha: Dinheiro, Pix (informar chave do pix), Cartão de Débito e Cartão de Credito.
+
+
+Antes de começar o desenvolvimento, gere 3 sugestões de estrutura para organização do projeto para eu escolher, sendo uma estrutura mais simples com todos os arquivos na mesma pasta.

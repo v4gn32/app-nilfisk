@@ -1,0 +1,469 @@
+Sistema dividido em 3 grandes fases:
+
+
+1- Entrada do pedido / Nota fiscal
+2- Processo interno (Oficina + Embalagem + Checklist + Fotos)
+3- Frete / Entrega / Ocorrências
+
+O app não é apenas um registro de envio — ele é um controle completo do fluxo logístico da máquina.
+
+Nome do Projeto — Gestão Logística Nilfisk
+
+Quero criar uma aplicação mobile para gestão de logística e entregas de máquinas, baseada no fluxo operacional da empresa. O sistema deve controlar todo o processo desde o recebimento do pedido até a entrega final ao cliente.
+
+1. Nome do Projeto
+
+Gestão Logística Nilfisk
+
+2. Objetivo do sistema
+
+Criar um aplicativo mobile para controlar o fluxo logístico das máquinas, incluindo:
+
+entrada do pedido e nota fiscal
+
+separação na oficina
+
+embalagem
+
+checklist de envio
+
+registro de fotos
+
+gestão de frete
+
+controle de entrega
+
+registro de ocorrências e sinistros
+
+envio automático de comunicação de entrega
+
+O sistema deve permitir acompanhar todo o status da máquina dentro do processo logístico.
+
+3. Tecnologias
+
+Aplicativo mobile:
+
+React Native
+
+Backend:
+
+PHP (API REST)
+
+Banco de dados:
+
+MySQL
+
+Armazenamento de arquivos:
+
+Upload de fotos e documentos
+
+4. Layout e Experiência do Usuário
+
+Interface:
+
+limpa
+
+moderna
+
+minimalista
+
+otimizada para uso operacional
+
+Fonte:
+
+Poppins
+
+Cores:
+
+Azul
+
+Cinza
+
+Branco
+
+Layout:
+
+Navegação inferior (Bottom Navigation)
+
+Menus principais:
+
+Home
+
+Entregas
+
+Clientes
+
+Relatórios
+
+Perfil
+
+Botão flutuante:
+
+➕ Novo envio
+
+5. Perfis de usuário
+
+O sistema terá dois usuários principais:
+
+Renê
+
+Responsável por iniciar o processo
+
+cadastro do envio
+
+dados da nota fiscal
+
+dados da máquina
+
+início da logística
+
+Erivaldo
+
+Responsável pela finalização
+
+fotos
+
+checklist
+
+conclusão da embalagem
+
+envio
+
+6. Fluxo operacional do sistema
+
+O sistema segue o seguinte fluxo:
+
+Entrada do Pedido
+↓
+Setup do processo
+↓
+Oficina
+↓
+Embalagem
+↓
+Checklist obrigatório
+↓
+Fotos da máquina
+↓
+Fim do processo de embalagem
+↓
+Envio (frete)
+↓
+Entrega
+↓
+Possível ocorrência ou sinistro
+↓
+Envio automático de e-mail ao cliente
+
+7. Entrada do Pedido
+
+Campos obrigatórios:
+
+Número do Pedido
+
+Número da Nota Fiscal
+
+Número da NF de Retorno
+
+Cliente
+
+Contato (e-mail)
+
+Vendedor
+
+Data de entrada no sistema
+
+Observação:
+
+Caso exista cadastro de vendedores, o usuário deve selecionar ao invés de digitar.
+
+8. Seleção do fluxo
+
+Após cadastrar o pedido o usuário deve selecionar:
+
+Tipo do fluxo:
+
+Saída
+
+Retorno
+
+Locação
+
+Vendas
+
+Demo
+
+Esta escolha define o fluxo logístico.
+
+9. Setup do processo
+
+Antes de iniciar o processo o usuário deve escolher:
+
+Oficina
+
+Embalagem
+
+O sistema obriga selecionar uma opção para avançar.
+
+10. Processo de Oficina
+
+Campos:
+
+Data de entrada na oficina
+
+Quando finalizar esta etapa:
+
+➡ transição automática para embalagem
+
+11. Processo de Embalagem
+
+Durante a embalagem devem ser registrados:
+
+Modo da máquina:
+
+Qtde
+
+N° série
+
+Acessórios
+
+Observações
+
+12. Checklist obrigatório
+
+Todos os itens devem ser marcados para continuar.
+
+Itens:
+
+Cabo carregamento
+
+Escova
+
+Suporte de disco
+
+Disco abrasivo
+
+Carregador
+
+Chave
+
+Saia
+
+Rodo
+
+Manual
+
+Confirmação de N/S
+
+Confirmação de quantidade
+
+⚠️ O sistema não permite avançar sem completar o checklist.
+
+13. Fotos da máquina
+
+Devem ser registradas fotos de:
+
+máquina completa
+
+acessórios
+
+máquina embalada
+
+As fotos devem ser anexadas no sistema.
+
+14. Finalização da embalagem
+
+Campos:
+
+Data final da embalagem
+
+Status gerado automaticamente:
+
+✔ Pronto para envio
+
+15. Início do fluxo de frete
+
+Quando o envio iniciar o status muda para:
+
+📦 Enviado
+
+16. Informações do Frete
+
+Campos:
+
+Tipo de frete
+
+Data de coleta
+
+Previsão de entrega
+
+Valor do frete
+
+Transportadora
+
+Cliente da operação
+
+Placa do veículo
+
+Nome do motorista
+
+Observações
+
+Status possíveis:
+
+Enviado
+
+Entregue
+
+Ocorrência
+
+Sinistro
+
+17. Ocorrências e Sinistros
+
+Caso exista problema no transporte:
+
+Campos:
+
+Motivo da ocorrência:
+
+Avaria
+
+Atraso
+
+Extravio
+
+Entrega recusada
+
+Cliente ausente
+
+Erro de documentação
+
+Outros campos:
+
+Custo adicional
+
+Solução da ocorrência
+
+18. Entrega
+
+Campos:
+
+Data da entrega
+
+Foto do canhoto da nota fiscal assinada
+
+Foto do CTe
+
+19. Envio automático de e-mail
+
+Após confirmação da entrega o sistema deve enviar automaticamente um e-mail contendo:
+
+dados da entrega
+
+fotos
+
+confirmação da entrega
+
+O sistema deve permitir cadastrar mais de um e-mail para envio.
+
+20. Relatórios
+
+O sistema deve gerar relatórios como:
+
+entregas por status
+
+tempo médio de separação
+
+tempo médio de oficina
+
+tempo médio de embalagem
+
+entregas no prazo
+
+custo de frete por mês
+
+número de ocorrências
+
+motivos das ocorrências
+
+índice de sinistros
+
+21. Dashboard
+
+Indicadores principais:
+
+total de entregas
+
+total enviadas
+
+total entregues
+
+total em atraso
+
+total de sinistros
+
+custo total de fretes
+
+entregas no prazo (%)
+
+22. Tracking para clientes (opcional)
+
+O sistema pode gerar um link de rastreamento para o cliente, permitindo acompanhar:
+
+status da entrega
+
+data prevista
+
+data de envio
+
+data de entrega
+
+23. Regras importantes
+
+campos de data devem ser obrigatórios
+
+fotos devem ser obrigatórias em alguns processos
+
+apenas o usuário que criou pode editar
+
+administrador pode visualizar todos
+
+24. Antes de iniciar o desenvolvimento
+
+Gerar 3 sugestões de estrutura do projeto:
+
+1️⃣ Estrutura simples
+2️⃣ Estrutura organizada
+3️⃣ Estrutura profissional escalável
+
+💡 Minha análise importante do fluxo do Michel
+
+Seu sistema na verdade é um:
+
+👉 WMS + TMS simplificado
+
+porque ele controla:
+
+separação
+
+oficina
+
+embalagem
+
+frete
+
+entrega
+
+ocorrência
+
+Ou seja, é mais robusto que um simples app de entrega.
+
+Se quiser, no próximo passo posso te entregar também:
+
+✅ Arquitetura completa do banco de dados (30+ tabelas)
+✅ Fluxo técnico do sistema (arquitetura de desenvolvimento)
+✅ Prompt ultra profissional para IA gerar o app inteiro
+✅ Wireframe das telas do app
+
+Isso vai facilitar muito o desenvolvimento.

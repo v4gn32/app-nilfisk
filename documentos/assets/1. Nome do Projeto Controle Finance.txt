@@ -1,0 +1,169 @@
+1. Nome do Projeto: Controle Financeiro VOF
+
+2. Objetivo:
+Ajudar pessoas a ter controle completo das suas finanças pessoais, registrando receitas, despesas e acompanhando o saldo mensal de forma simples e organizada.
+
+3. Tecnologias:
+Utilize PHP e banco de dados MySQL.
+
+4. Design, Cores e Layout:
+- Interface limpa, minimalista e profissional.
+- As cores devem ser baseadas na paleta de cores tons de azul, verde e cinza claro.
+- Deve ser responsivo para qualquer dispositivo e tamanho de tela.
+- Focado na melhor experiência de uso possível (UX).
+- Layout moderno com sidebar à esquerda.
+- Use a fonte "Poppins".
+- Sidebar com logo no topo e menu de navegação.
+- Separe o arquivo menu.php que implementa o menu sidebar.
+
+Botões de ação:
+- Primário em azul
+- Secundários em branco
+
+5. Requisitos importantes
+- O sistema deve ter login (sessões PHP nativas).
+- Cada usuário deve ver apenas os seus próprios dados (arquitetura multi-tenancy).
+- Código claro, fácil de entender e evoluir.
+- Projeto preparado para evolução futura (integração com bancos, notificações, WhatsApp, etc.).
+- Não permitir duas contas de usuário com o mesmo e-mail.
+- Máscara de telefone: Formato brasileiro (XX) XXXXX-XXXX.
+- As senhas dos usuários devem ter no mínimo 6 caracteres.
+- Formato de moeda: R$ com separador de milhar.
+- Formato de data: dd/mm/yyyy com calendário.
+
+6. Funcionalidades da aplicação para a área deslogada (sem login)
+- Tela de Boas-vindas
+- Página inicial apresentando o sistema e os benefícios de manter um controle financeiro pessoal organizado.
+
+Tela de criação de conta
+Campos:
+- Nome
+- E-mail
+- WhatsApp
+- Senha
+- Confirmação de senha
+
+Tela de login
+Campos:
+- E-mail
+- Senha
+
+7. Funcionalidades da aplicação que exigem login do usuário
+Painel Gerencial (Dashboard)
+
+Criar indicadores financeiros com:
+- Saldo atual
+- Total de receitas no mês
+- Total de despesas no mês
+- Quantidade de lançamentos no mês
+- Saldo do mês anterior
+- Gráfico financeiro
+- Gráfico mostrando receitas x despesas dos últimos 6 meses.
+- Painel de alertas
+
+Lista com:
+- Contas a pagar hoje
+- Contas a vencer nos próximos 7 dias
+
+Campos exibidos:
+- Descrição
+- Categoria
+- Valor
+- Parcelas
+- Data de vencimento
+- Botão para marcar como pago
+- Cadastro de Categorias
+
+Para organização financeira.
+Campos:
+- Nome da categoria
+- Tipo (Receita ou Despesa)
+- Cor da categoria (opcional)
+
+Exemplos:
+- Salário
+- Alimentação
+- Moradia
+- Transporte
+- Lazer
+
+Cadastro de Receitas
+Campos:
+- Descrição
+- Categoria
+- Valor
+- Data de recebimento
+- Forma de recebimento (Dinheiro, Pix, Cartão, Transferência)
+- Observações
+- Cadastro de Despesas
+
+Campos:
+- Descrição
+- Categoria
+- Valor
+- Data de vencimento
+- Data de pagamento
+- Forma de pagamento (Dinheiro, Pix, Cartão, Débito)
+- Status (Pendente ou Pago)
+- Observações
+- Lista de Lançamentos Financeiros
+
+Tela com todas as receitas e despesas registradas.
+Campos exibidos:
+- Tipo (Receita ou Despesa)
+- Descrição
+- Categoria
+- Valor
+- Status
+- Data
+
+Filtros:
+- Tipo (Receita / Despesa)
+- Categoria
+- Status
+- Período (data inicial e final)
+
+Ações em cada linha:
+- Editar lançamento
+- Excluir lançamento
+- Marcar como pago (para despesas)
+- Relatórios financeiros
+
+Tela com relatórios como:
+- Resumo mensal
+- Total de receitas
+- Total de despesas
+- Saldo do mês
+- Gráfico por categoria
+
+Mostrar onde o usuário está gastando mais dinheiro.
+
+Evolução financeira
+
+Gráfico mostrando saldo mês a mês.
+
+Tela de configurações
+- Dados da conta
+- Usuário pode alterar:
+- Nome
+- WhatsApp
+- E-mail
+- Alterar senha
+
+Campos:
+- Senha atual
+- Nova senha
+- Confirmar nova senha
+- Preferências financeiras
+
+Configurações como:
+- Dia de início do mês financeiro
+- Moeda padrão (R$)
+- Notificação para contas próximas do vencimento (preparado para futuro)
+
+Antes de começar o desenvolvimento
+- Gere 3 sugestões de estrutura para organização do projeto, sendo:
+- Estrutura simples (todos arquivos na mesma pasta)
+- Estrutura organizada por funcionalidades
+- Estrutura profissional estilo MVC simplificado
+- para que eu possa escolher antes de iniciar o desenvolvimento.

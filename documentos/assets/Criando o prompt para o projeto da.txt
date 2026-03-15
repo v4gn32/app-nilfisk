@@ -1,0 +1,202 @@
+Criando o prompt para o projeto da Nilfisk
+
+Quero criar um aplicativo mobile responsivo. Seguem abaixo os detalhes do projeto: 
+
+1. Nome do Projeto
+- LG-Nilfisk (Gestão Logistica Nilfisk)
+
+---
+
+2. Objetivo:
+- Desenvolver um sistema para gerenciar o processo logístico da Nilfisk, permitindo o controle das etapas de separação, embalagem e entrega de máquinas. O sistema permitirá registros em tempo real pelos usuários, checklist de acessórios e acompanhamento do tempo de cada processo, garantindo maior organização, eficiência e rastreabilidade nas entregas.
+
+---
+
+3. Tecnologias recomendadas para o App:
+
+a. Aplicativo Mobile
+Para os usuários da logística (oficina, embalagem, entrega).
+Tecnologia recomendada:
+- React Native
+Por quê:
+- Um único código para Android e iOS
+- Comunidade enorme
+- Integra bem com APIs
+- Ideal para aplicativos corporativos internos
+
+Bibliotecas úteis:
+- Expo – facilita muito o desenvolvimento
+- React Navigation – navegação entre telas
+- Axios – comunicação com API
+- React Native Paper – interface moderna
+
+b. Backend (API do sistema)
+Aqui ficam as regras do sistema.
+
+Opção 1 (MAIS FÁCIL para sua hospedagem)
+- PHP
+- API REST em PHP
+- Conecta direto com MySQL
+
+Vantagem:
+✔ roda direto na Hostgator
+✔ simples de manter
+✔ barato
+
+Opção 2 (Mais moderno)
+- Node.js
+- Express.js
+
+Vantagem:
+- mesma linguagem do React Native (JavaScript)
+- API muito rápida
+algumas hospedagens da Hostgator não suportam bem Node.
+
+c. Banco de Dados
+- MySQL
+
+Perfeito para:
+- pedidos
+- checklist
+- usuários
+- status logístico
+- histórico de movimentação
+
+d. Painel Administrativo (Web)
+Para o gestor acompanhar a logística.
+Tecnologias recomendadas:
+- React
+ou
+- Bootstrap + PHP
+
+Funcionalidades:
+- Dashboard logístico
+- Tempo de processo
+- Status dos pedidos
+- Controle de usuários
+- Relatórios
+
+e. Armazenamento de Fotos
+O sistema terá fotos das máquinas, então eu quero usar:
+- servidor da própria Hostgator
+ou
+- Cloudflare (CDN)
+
+f. Autenticação
+- Login com JWT
+
+Tecnologia:
+- JSON Web Token
+
+g. Dashboard e Gráficos
+Para mostrar produtividade da logística.
+Bibliotecas:
+- Chart.js
+- Recharts
+
+Arquitetura recomendada
+APP MOBILE (React Native)
+        │
+        │ API
+        ▼
+BACKEND (PHP ou Node.js)
+        │
+        ▼
+BANCO DE DADOS (MySQL)
+        │
+        ▼
+PAINEL ADMIN (React ou PHP)
+
+Tecnologias finais recomendadas
+Mobile
+- React Native
+- Expo
+- React Navigation
+
+Backend
+- PHP (API REST)
+
+Banco
+- MySQL
+
+Admin
+- React ou PHP + Bootstrap
+
+Outros
+- JWT (login)
+- Axios
+- Chart.js
+
+Stack ideal
+Mobile
+- React Native + Expo
+
+Backend
+- PHP (API REST)
+
+Banco
+- MySQL
+
+Painel Admin
+- PHP + Bootstrap
+
+✔ fácil
+✔ barato
+✔ roda na Hostgator
+✔ rápido de desenvolver
+
+---
+
+4. Design, Cores e Layout:
+- Interface limpa, minimalista e profissional.
+- As Cores devem ser baseadas na paleta de cores #28313F, #004AAD, #797979, #38C682, #E5ECFC.
+- Deve ser responsivo a qualquer dispositivo e tamanho de tela.
+- Focado na melhor experiencia de uso possível (UX).
+- Na área administrativa: Usar layout moderno com sidebar à esquerda na cor #28313F, logotipo branco no topo e menu de navegação.
+- Separe o arquivo "menu.php" que implementa o menu sidebar.
+- Use fonte "Roboto".
+- Botões de ação (Primário em #004AAD, secundários em #E5ECFC com borda #797979).
+
+---
+
+5. Requisitos importantes: 
+- Essa aplicação tem 2 áreas totalmente separadas: área dos usuários (privada com login 2 Gestores e até 10 estoquistas) e área do administrador (privada com login, para controle total de usuários, relatórios de separação, embalagens, entregas, sinistros, etc.)
+- O sistema deve ter login (sessões PHP nativas) para área administrativa e gestão completa do sistema.
+- O Administrador fica responsável por cadastrar usuários, clientes, transportadoras
+- o sistema dever ter uma opção em que os gestes selecione os vendedores. 
+- Cada empresa deve ver apenas os seus dados (arquitetura multi-tenancy).
+- Código claro, fácil de entender e evoluir se necessário.
+- Projeto preparado para evolução futura (pagamentos, notificações, WhatsApp, etc.).
+- Máscara de telefone: Formato brasileiro (XX) XXXXX-XXXX.
+- As Senhas dos usuários devem ter no mínimo 6 caracteres.
+- Formato de moeda: R$ com separador de milhar.
+- Formato de data: dd/mm/yyyy.
+- Usar ícones modernos e no formato outline.
+
+6. Funcionalidade da aplicação para a área dos gestores: 
+O sistema terá dois gestores com funcionalidades iguais porem um tera mais funcionalidades que o outro, Gestor do aplicativo:
+a) Rene
+b) Ervivaldo 
+
+Tela 1: Cardapio no formato página unica: 
+a) Deve exibir: foto do estabelecimento, nome do estabelecimenot, indicador se está aberto aogra ou não, lista das categorias na horizontal, produtos em destaque e produtos agrupados pelas categorias.
+b) Ao tocar sobre uma categoria, roalr a página e levar o usuário para a categoria desejada (link interno).
+c) Ao tocar sobre um produto, abrir os detalhes do produto por cima do menu em um popup modal.
+
+Tela 2: carrinho de compras. mostrar os produtos escolhidos, quantidade, frete, valores unitarios e totasi. Botão para "continuar para entrega"
+
+Tela 3: dados de entrega. Frmulário com nome completo, whatsapp, endereço completo.
+
+Tela 4: Pagamento. Aqui o cliente escolhe como vai pagar: 
+a
+) dinheiro
+b) PIX (mostrar chave pix do restaurante)
+c) cartão de débito
+d) cartão de crédito
+
+(no caso dos 2 cartões acima, o entregador leva a máquina de cartão no momento da entrega)
+
+Tela 5: Confirmação. Exibir confirmação de que o pedido foi realizado com sucesso e os dados do pedido. Colocar um botão "Enviar confirmação no WhatsApp". Ao abrir WhatsApp, enviar mensagem: 
+ 
+
+

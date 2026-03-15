@@ -1,9 +1,3 @@
-# Criando o Prompt
-
-Quero criar uma aplicação SaaS web responsiva. Seguem abaixo os detalhes do projeto:
-
----
-
 # Nome do Projeto
 
 Gestão Logística Nilfisk
@@ -498,5 +492,3 @@ Um aplicativo mobile completo para gestão logística com:
 * indicadores de performance
 * automação de comunicação
 * operação totalmente via dispositivos móveis
-
-Antes de começar o desenvolvimento, gere 3 sugestões de estrutura para organização do projeto para eu escolher, sendo uma estrutura mais simples com todos os arquivos na mesma pasta. Lembrando que sera um app mobile!
