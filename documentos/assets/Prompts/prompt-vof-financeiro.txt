@@ -3,10 +3,10 @@
 Quero criar uma aplicação SaaS web responsiva. Seguem abaixo os detalhes do projeto:
 
 ## Nome do Projeto
-Pedido Web
+VOF Financeiro
 
 ## Objetivo
-Ajudar donos de empresas que vendem comida por delivery. Os donos das empresas farão a divulgação do link público de seu cardápio digital e os clientes poderão fazer seus pedidos de forma online.
+Ajudar as pessoas a ter controle financeiro, podendo planeja, organizar tendo 
 
 ## Tecnologias
 - PHP
